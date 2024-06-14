@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bls5sqfv8ft3w"]
+
+[ext_resource type="Texture2D" uid="uid://jithp3y0gd84" path="res://assets/Weizen.png" id="1_2t0xe"]
+[ext_resource type="Script" path="res://collectables/Collectable_Entity.gd" id="1_ylq6t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s5twk"]
+radius = 15.2971
+
+[node name="Collectable_Entity" type="Area2D"]
+script = ExtResource("1_ylq6t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+shape = SubResource("CircleShape2D_s5twk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -13)
+scale = Vector2(0.017334, 0.017334)
+texture = ExtResource("1_2t0xe")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

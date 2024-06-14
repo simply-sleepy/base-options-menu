@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://esnk7yu6kssa"]
+
+[ext_resource type="Script" path="res://scenes/Options Menu/subtitles_toggle_button.gd" id="1_iy8rq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_owsnv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gmhws"]
+
+[node name="Subtitles_Toggle_Button" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iy8rq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 64
+
+[node name="Name_Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Subtitles"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 124
+theme_override_styles/separator = SubResource("StyleBoxEmpty_owsnv")
+
+[node name="CheckButton" type="CheckButton" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 124
+theme_override_styles/separator = SubResource("StyleBoxEmpty_gmhws")
+
+[node name="State_Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "OFF"

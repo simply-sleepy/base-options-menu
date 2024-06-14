@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://3nwyu853bm12"]
+
+[ext_resource type="Script" path="res://scenes/player/Jump_Handler.gd" id="1_st1o5"]
+[ext_resource type="AudioStream" uid="uid://skx4uisx8j4d" path="res://sfx/350904__cabled_mess__jump_c_02.wav" id="2_3essx"]
+
+[node name="Jump_Handler" type="Node2D"]
+script = ExtResource("1_st1o5")
+jump_speed = null
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_3essx")
+volume_db = -0.19
+bus = &"Sfx"
